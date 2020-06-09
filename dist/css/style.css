@@ -4,6 +4,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@400;700&family=Raleway:wght@400;500&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7164,6 +7165,8 @@ a.text-dark:hover, a.text-dark:focus {
 .header {
   min-height: 803px;
   padding: 63px 0 194px 0; }
+  .header .container {
+    position: relative; }
   .header__top {
     display: flex;
     align-items: center;
@@ -7183,4 +7186,147 @@ a.text-dark:hover, a.text-dark:focus {
       .header__hamburger span:nth-child(3) {
         margin-bottom: 0; }
   .header__title {
-    margin-top: 202px; }
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 206px;
+    max-width: 1020px;
+    text-shadow: 4px 8px 10px rgba(0, 0, 0, 0.24);
+    color: #505050;
+    font-family: "Montserrat";
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    letter-spacing: 2.7px; }
+    .header__title span {
+      background-color: rgba(118, 244, 234, 0.5);
+      padding: 0 14px; }
+  .header__juice {
+    position: absolute;
+    right: 69px; }
+
+.btn {
+  width: 232px;
+  height: 53px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.75);
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  letter-spacing: 2.16px;
+  display: block; }
+  .btn_header {
+    margin: 0 auto;
+    margin-top: 150px; }
+
+.about {
+  min-height: 985px;
+  padding: 129px 0 113px 0; }
+  .about__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 147px; }
+  .about__text {
+    width: 476px;
+    opacity: 0.74;
+    color: #000000;
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.8px; }
+    .about__text span {
+      display: block;
+      color: #000000;
+      font-family: "Merriweather";
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 31px;
+      margin-top: 38px; }
+      .about__text span:first-child {
+        margin-top: 0; }
+
+.title {
+  text-align: center; }
+  .title__header {
+    color: #000000;
+    font-family: "Montserrat";
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2.28px; }
+  .title__subheader {
+    opacity: 0.62;
+    color: rgba(0, 0, 0, 0.62);
+    font-family: "Merriweather";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1.08px;
+    margin-top: 17px; }
+
+.slider {
+  position: relative; }
+  .slider__wrapper {
+    max-height: 483px;
+    max-width: 392px;
+    overflow: hidden; }
+  .slider_about {
+    margin-left: 44px; }
+  .slider__inner {
+    display: flex;
+    max-height: 100%;
+    position: relative;
+    z-index: 2; }
+  .slider__item img {
+    height: 100%;
+    width: 392px; }
+  .slider__before {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 479px;
+    height: 412px;
+    background-color: #eff0f2;
+    z-index: 1; }
+  .slider__dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: -43px;
+    transform: translate(-50%, 100%); }
+  .slider__dot {
+    width: 10px;
+    height: 10px;
+    background-color: #d0d0d0;
+    border-radius: 4px;
+    margin-right: 3px; }
+    .slider__dot:last-child {
+      margin-right: 0; }
+    .slider__dot_active {
+      background-color: #71f6eb; }
+
+.work {
+  min-height: 1166px;
+  padding: 129px 0 125px 0; }
+  .work .container_p {
+    padding: 0; }
+  .work__item img {
+    display: block;
+    width: 100%; }
+  .work__item-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 370px));
+    grid-gap: 15px;
+    margin: 0 auto;
+    margin-top: 122px;
+    justify-content: center; }

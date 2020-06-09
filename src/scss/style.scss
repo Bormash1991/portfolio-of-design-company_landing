@@ -1,3 +1,14 @@
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@400;700&family=Raleway:wght@400;500&display=swap");
+@import "./blocks/header";
+@import "./blocks/btn";
+@import "./blocks/about";
+@import "./blocks/title";
+@import "./blocks/slider";
+@import "./blocks/work";
 
-@import './blocks/header';
+// body {
+// 	font-family: "Merriweather", serif;
+// 	font-family: "Montserrat", sans-serif;
+// 	font-family: "Raleway", sans-serif;
+// }

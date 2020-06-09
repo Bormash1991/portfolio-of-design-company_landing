@@ -1,0 +1,35 @@
+.about {
+	min-height: 985px;
+	padding: 129px 0 113px 0;
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 147px;
+	}
+	&__text {
+		width: 476px;
+		opacity: 0.74;
+		color: #000000;
+		font-family: "Raleway";
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 28px;
+		letter-spacing: 0.8px;
+
+		span {
+			display: block;
+			color: #000000;
+			font-family: "Merriweather";
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 28px;
+			text-transform: uppercase;
+			letter-spacing: 1.2px;
+			margin-bottom: 31px;
+			margin-top: 38px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}

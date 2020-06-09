@@ -1,0 +1,21 @@
+.work {
+	min-height: 1166px;
+	padding: 129px 0 125px 0;
+	.container_p {
+		padding: 0;
+	}
+	&__item {
+		img {
+			display: block;
+			width: 100%;
+		}
+		&-wrapper {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 370px));
+			grid-gap: 15px;
+			margin: 0 auto;
+			margin-top: 122px;
+			justify-content: center;
+		}
+	}
+}
