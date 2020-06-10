@@ -96,26 +96,29 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js");
-/* harmony import */ var _modules_showInformation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/showInformation */ "./src/js/modules/showInformation.js");
+/* harmony import */ var _modules_itemInformation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/itemInformation */ "./src/js/modules/itemInformation.js");
+/* harmony import */ var _modules_personInformation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/personInformation */ "./src/js/modules/personInformation.js");
+
 
 
 window.addEventListener("DOMContentLoaded", () => {
   Object(_modules_slider__WEBPACK_IMPORTED_MODULE_0__["default"])(".slider_about .slider__item", ".slider_about .slider__inner", ".slider_about .slider__dots", ".slider_about .slider__wrapper", false);
-  Object(_modules_showInformation__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  Object(_modules_itemInformation__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  Object(_modules_personInformation__WEBPACK_IMPORTED_MODULE_2__["default"])();
 });
 
 /***/ }),
 
-/***/ "./src/js/modules/showInformation.js":
+/***/ "./src/js/modules/itemInformation.js":
 /*!*******************************************!*\
-  !*** ./src/js/modules/showInformation.js ***!
+  !*** ./src/js/modules/itemInformation.js ***!
   \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-const showInformation = () => {
+const itemInformation = () => {
   const trigger = document.querySelectorAll("[data-show-inf]"),
         moreInform = document.querySelectorAll(".service__item-add"),
         closeInform = document.querySelectorAll(".service__item-button_black");
@@ -134,7 +137,60 @@ const showInformation = () => {
   });
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (showInformation);
+/* harmony default export */ __webpack_exports__["default"] = (itemInformation);
+
+/***/ }),
+
+/***/ "./src/js/modules/personInformation.js":
+/*!*********************************************!*\
+  !*** ./src/js/modules/personInformation.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const personInformation = () => {
+  const elems = document.querySelectorAll(".team__item");
+  const itemWrapper = document.querySelector(".team__wrapper");
+  const inform = document.querySelectorAll(".team__inform-wrapper");
+  itemWrapper.addEventListener("click", e => {
+    const target = e.target;
+
+    if (target && target.classList.contains("team__item")) {
+      inform.forEach(item => {
+        item.style = "none";
+      });
+      elems.forEach((item, i) => {
+        if (item == target) {
+          let targetCoords = item.getBoundingClientRect();
+          let xCoord = e.clientX - targetCoords.left;
+          let yCoord = e.clientY - targetCoords.top;
+          inform[i].style.cssText = `
+					        display: block;
+					        left:${xCoord}px;
+                            top:${yCoord}px `;
+
+          if (document.body.offsetWidth < document.body.scrollWidth) {
+            inform[i].style.cssText = `
+					        display: block;
+					        left:${xCoord - (document.body.scrollWidth - document.body.offsetWidth + 20)}px;
+                            top:${yCoord}px `;
+          }
+        }
+      });
+    }
+  });
+  elems.forEach(item => {
+    item.addEventListener("mouseleave", () => {
+      inform.forEach(item => {
+        item.style = "none";
+      });
+    });
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (personInformation);
 
 /***/ }),
 

@@ -1,4 +1,4 @@
-const showInformation = () => {
+const itemInformation = () => {
 	const trigger = document.querySelectorAll("[data-show-inf]"),
 		moreInform = document.querySelectorAll(".service__item-add"),
 		closeInform = document.querySelectorAll(".service__item-button_black");
@@ -17,4 +17,4 @@ const showInformation = () => {
 		});
 	});
 };
-export default showInformation;
+export default itemInformation;
