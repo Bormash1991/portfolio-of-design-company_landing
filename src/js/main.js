@@ -1,4 +1,5 @@
 import slider from "./modules/slider";
+import showInformation from "./modules/showInformation";
 window.addEventListener("DOMContentLoaded", () => {
 	slider(
 		".slider_about .slider__item",
@@ -7,4 +8,5 @@ window.addEventListener("DOMContentLoaded", () => {
 		".slider_about .slider__wrapper",
 		false
 	);
+	showInformation();
 });
