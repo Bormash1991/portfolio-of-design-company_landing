@@ -7280,10 +7280,37 @@ a.text-dark:hover, a.text-dark:focus {
 
 .slider {
   position: relative; }
+  .slider__control {
+    display: flex;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    transform: translateY(100%); }
+  .slider__prev, .slider__next {
+    display: block;
+    width: 53px;
+    height: 53px;
+    box-shadow: 3px 7px 11px rgba(20, 20, 21, 0.05);
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px; }
+    .slider__prev img, .slider__next img {
+      opacity: 0.3; }
+    .slider__prev:hover, .slider__next:hover {
+      box-shadow: 2px 6px 11px rgba(20, 20, 21, 0.1);
+      background-color: #71f6eb; }
+      .slider__prev:hover img, .slider__next:hover img {
+        opacity: 1; }
   .slider__wrapper {
-    max-height: 483px;
-    max-width: 392px;
+    height: 483px;
+    width: 392px;
     overflow: hidden; }
+    .slider__wrapper_team {
+      width: 319px;
+      height: 410px; }
+    .slider__wrapper_inf {
+      width: 666px;
+      height: 362px; }
   .slider_about {
     margin-left: 44px; }
   .slider__inner {
@@ -7291,6 +7318,48 @@ a.text-dark:hover, a.text-dark:focus {
     max-height: 100%;
     position: relative;
     z-index: 2; }
+  .slider__item_team img {
+    width: 319px !important;
+    height: 410px !important; }
+  .slider__item_inf {
+    width: 666px;
+    height: 362px;
+    background-color: #eaebed;
+    padding: 101px 81px 69px 81px;
+    text-align: center; }
+  .slider__item-title {
+    font-family: "Merriweather";
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.2px; }
+    .slider__item-title span {
+      font-style: oblique;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.9px;
+      color: #787878; }
+  .slider__item-subtitle {
+    opacity: 0.7;
+    color: #000000;
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-top: 17px;
+    letter-spacing: 0.96px; }
+  .slider__item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 104px;
+    margin: 0 auto;
+    margin-top: 33px; }
+  .slider__item-star {
+    width: 16px;
+    height: 14px; }
+    .slider__item-star img {
+      display: block;
+      width: 100% !important; }
   .slider__item img {
     height: 100%;
     width: 392px; }
@@ -7303,6 +7372,9 @@ a.text-dark:hover, a.text-dark:focus {
     height: 412px;
     background-color: #eff0f2;
     z-index: 1; }
+    .slider__before_team {
+      width: 393px;
+      height: 362px; }
   .slider__dots {
     display: flex;
     justify-content: center;
@@ -7500,3 +7572,31 @@ a.text-dark:hover, a.text-dark:focus {
     .team__inform-item a img {
       height: 100%;
       width: auto; }
+
+.say {
+  min-height: 923px;
+  padding: 121px 0 139px 0; }
+  .say__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 137px; }
+
+.clients {
+  min-height: 388px;
+  padding: 108px 0; }
+  .clients__item {
+    max-width: 140px; }
+    .clients__item img {
+      display: block;
+      width: 100%; }
+  .clients__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 538px;
+    margin: 0 auto; }
+    .clients__wrapper_bottom {
+      width: 100%;
+      margin-top: 40px; }

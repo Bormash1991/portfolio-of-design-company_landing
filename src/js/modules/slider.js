@@ -1,7 +1,7 @@
 const slider = (
 	contentSelector,
 	innerSelector,
-	dWrapperSelector,
+	dWrapperSelector = "",
 	wrapperSelector,
 	auto = true,
 	nextSelector = "",
@@ -9,32 +9,25 @@ const slider = (
 ) => {
 	const content = document.querySelectorAll(contentSelector),
 		inner = document.querySelector(innerSelector),
-		dotsWrapper = document.querySelector(dWrapperSelector),
 		wrapper = document.querySelector(wrapperSelector),
 		width = window.getComputedStyle(wrapper).width;
-	let slideIndex = 1,
+	let dotsWrapper,
+		slideIndex = 1,
 		margin = 0,
 		dots = [];
+
 	inner.style.cssText = `
         width: ${100 * content.length}%;
-        transition: 0.5s all;
+        transition: 0.4s all;
         `;
-	for (let i = 0; i < content.length; i++) {
-		const div = document.createElement("div");
-		div.setAttribute("data-slide-to", i + 1);
-		div.classList.add("slider__dot");
-		dotsWrapper.appendChild(div);
-		dots.push(div);
-		if (i == 0) {
-			div.classList.add("slider__dot_active");
-		}
-	}
+
 	const selectDot = () => {
 		dots.forEach((item) => {
 			item.classList.remove("slider__dot_active");
 		});
 		dots[slideIndex - 1].classList.add("slider__dot_active");
 	};
+
 	const nextSlide = () => {
 		if (margin == +width.slice(0, width.length - 2) * (content.length - 1)) {
 			margin = 0;
@@ -76,5 +69,43 @@ const slider = (
 			nextSlide();
 		});
 	}
+	if (contentSelector == ".slider_inform .slider__item") {
+		dotsWrapper = document.querySelector(dWrapperSelector);
+		dots = dotsWrapper.querySelectorAll(".slider__dot");
+		dotsWrapper.addEventListener("click", (e) => {
+			const target = e.target;
+			dots.forEach((item, i) => {
+				if (item == target) {
+					slideIndex = i + 1;
+					margin = +width.slice(0, width.length - 2) * i;
+					inner.style.transform = `translateX(-${margin}px)`;
+				}
+			});
+		});
+		return;
+	}
+
+	dotsWrapper = document.querySelector(dWrapperSelector);
+	for (let i = 0; i < content.length; i++) {
+		const div = document.createElement("div");
+		div.setAttribute("data-slide-to", i + 1);
+		div.classList.add("slider__dot");
+		dotsWrapper.appendChild(div);
+		dots.push(div);
+		if (i == 0) {
+			div.classList.add("slider__dot_active");
+		}
+	}
+	dotsWrapper.addEventListener("click", (e) => {
+		const target = e.target;
+		dots.forEach((item, i) => {
+			if (item == target) {
+				slideIndex = i + 1;
+				selectDot();
+				margin = +width.slice(0, width.length - 2) * i;
+				inner.style.transform = `translateX(-${margin}px)`;
+			}
+		});
+	});
 };
 export default slider;

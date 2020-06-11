@@ -103,6 +103,8 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener("DOMContentLoaded", () => {
   Object(_modules_slider__WEBPACK_IMPORTED_MODULE_0__["default"])(".slider_about .slider__item", ".slider_about .slider__inner", ".slider_about .slider__dots", ".slider_about .slider__wrapper", false);
+  Object(_modules_slider__WEBPACK_IMPORTED_MODULE_0__["default"])(".slider_team .slider__item", ".slider_team .slider__inner", ".slider_team .slider__dots", ".slider_team .slider__wrapper", false, ".slider__next", ".slider__prev");
+  Object(_modules_slider__WEBPACK_IMPORTED_MODULE_0__["default"])(".slider_inform .slider__item", ".slider_inform .slider__inner", ".slider_team .slider__dots", ".slider_inform .slider__wrapper", false, ".slider__next", ".slider__prev");
   Object(_modules_itemInformation__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_modules_personInformation__WEBPACK_IMPORTED_MODULE_2__["default"])();
 });
@@ -203,31 +205,19 @@ const personInformation = () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-const slider = (contentSelector, innerSelector, dWrapperSelector, wrapperSelector, auto = true, nextSelector = "", prevSelector = "") => {
+const slider = (contentSelector, innerSelector, dWrapperSelector = "", wrapperSelector, auto = true, nextSelector = "", prevSelector = "") => {
   const content = document.querySelectorAll(contentSelector),
         inner = document.querySelector(innerSelector),
-        dotsWrapper = document.querySelector(dWrapperSelector),
         wrapper = document.querySelector(wrapperSelector),
         width = window.getComputedStyle(wrapper).width;
-  let slideIndex = 1,
+  let dotsWrapper,
+      slideIndex = 1,
       margin = 0,
       dots = [];
   inner.style.cssText = `
         width: ${100 * content.length}%;
-        transition: 0.5s all;
+        transition: 0.4s all;
         `;
-
-  for (let i = 0; i < content.length; i++) {
-    const div = document.createElement("div");
-    div.setAttribute("data-slide-to", i + 1);
-    div.classList.add("slider__dot");
-    dotsWrapper.appendChild(div);
-    dots.push(div);
-
-    if (i == 0) {
-      div.classList.add("slider__dot_active");
-    }
-  }
 
   const selectDot = () => {
     dots.forEach(item => {
@@ -286,6 +276,48 @@ const slider = (contentSelector, innerSelector, dWrapperSelector, wrapperSelecto
       nextSlide();
     });
   }
+
+  if (contentSelector == ".slider_inform .slider__item") {
+    dotsWrapper = document.querySelector(dWrapperSelector);
+    dots = dotsWrapper.querySelectorAll(".slider__dot");
+    dotsWrapper.addEventListener("click", e => {
+      const target = e.target;
+      dots.forEach((item, i) => {
+        if (item == target) {
+          slideIndex = i + 1;
+          margin = +width.slice(0, width.length - 2) * i;
+          inner.style.transform = `translateX(-${margin}px)`;
+        }
+      });
+    });
+    return;
+  }
+
+  dotsWrapper = document.querySelector(dWrapperSelector);
+
+  for (let i = 0; i < content.length; i++) {
+    const div = document.createElement("div");
+    div.setAttribute("data-slide-to", i + 1);
+    div.classList.add("slider__dot");
+    dotsWrapper.appendChild(div);
+    dots.push(div);
+
+    if (i == 0) {
+      div.classList.add("slider__dot_active");
+    }
+  }
+
+  dotsWrapper.addEventListener("click", e => {
+    const target = e.target;
+    dots.forEach((item, i) => {
+      if (item == target) {
+        slideIndex = i + 1;
+        selectDot();
+        margin = +width.slice(0, width.length - 2) * i;
+        inner.style.transform = `translateX(-${margin}px)`;
+      }
+    });
+  });
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (slider);

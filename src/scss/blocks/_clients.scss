@@ -1,0 +1,22 @@
+.clients {
+	min-height: 388px;
+	padding: 108px 0;
+	&__item {
+		max-width: 140px;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 538px;
+		margin: 0 auto;
+		&_bottom {
+			width: 100%;
+			margin-top: 40px;
+		}
+	}
+}
