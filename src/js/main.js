@@ -1,6 +1,9 @@
 import slider from "./modules/slider";
 import itemInformation from "./modules/itemInformation";
 import personInformation from "./modules/personInformation";
+import map from "./modules/map";
+import menu from "./modules/menu";
+import scroll from "./modules/scroll";
 window.addEventListener("DOMContentLoaded", () => {
 	slider(
 		".slider_about .slider__item",
@@ -29,4 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	);
 	itemInformation();
 	personInformation();
+	map();
+	menu(".header__hamburger", ".header__menu-close", ".header__menu");
+	scroll();
 });

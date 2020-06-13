@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/style.css" />
+
 		<title>Free</title>
 	</head>
 	<body>
@@ -28,8 +29,24 @@
 					<img src="img/header/juice.png" alt="glassOfJuice" />
 				</div>
 			</div>
+			<div class="header__menu">
+				<div class="header__menu-close">
+					<span></span>
+					<span></span>
+				</div>
+				<nav>
+					<ul class="header__menu-list">
+						<li class="header__menu-item"><a href="#about">About</a></li>
+						<li class="header__menu-item"><a href="#work">Work</a></li>
+						<li class="header__menu-item"><a href="#service">Service</a></li>
+						<li class="header__menu-item"><a href="#team">Team</a></li>
+						<li class="header__menu-item"><a href="#clients">Clients</a></li>
+						<li class="header__menu-item"><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
 		</header>
-		<section class="about">
+		<section id="about" class="about">
 			<div class="container">
 				<div class="title">
 					<div class="title__header">ABOUT US</div>
@@ -94,7 +111,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="work">
+		<section id="work" class="work">
 			<div class="container container_p">
 				<div class="title">
 					<div class="title__header">featured works</div>
@@ -112,7 +129,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="service">
+		<section id="service" class="service">
 			<div class="container container_p">
 				<div class="title">
 					<div class="title__header">our services</div>
@@ -288,7 +305,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="team">
+		<section id="team" class="team">
 			<div class="container container_p">
 				<div class="title">
 					<div class="title__header">small team</div>
@@ -652,7 +669,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="clients">
+		<section id="clients" class="clients">
 			<div class="container">
 				<div class="clients__wrapper">
 					<div class="clients__item">
@@ -687,6 +704,84 @@
 				</div>
 			</div>
 		</section>
+		<section id="contact" class="contact">
+			<div class="container container_p">
+				<div class="contact__wrapper">
+					<div class="contact__form-wrapper">
+						<form action="#" class="contact__form">
+							<label for="nameвава">Name*</label>
+							<input
+								class="contact__form-input"
+								id="name"
+								name="name"
+								type="text"
+								required
+							/>
+							<label for="subject">Subject*</label>
+							<input
+								class="contact__form-input"
+								id="subject"
+								name="subject"
+								type="text"
+								required
+							/>
+							<label for="email">E-mail*</label>
+							<input
+								class="contact__form-input"
+								id="email"
+								name="email"
+								type="email"
+								required
+							/>
+							<label for="message">Message*</label>
+							<textarea
+								class="contact__form-input contact__form-text"
+								id="message"
+								name="message"
+								type="text"
+								required
+								maxlength="2000"
+							></textarea>
+							<button class="contact__form-button">Send Message</button>
+						</form>
+					</div>
+					<div class="contact__map-wrapper">
+						<div class="contact__map-text">
+							Adress line 1 <br />
+							Adress line 2 <br />
+							Phone: +548 945645 <br />
+							Fax: +456456 54546 <br />
+							<br />
+							Web: www.designagency.net <br />
+							E-mail: info@designagency.net
+						</div>
+						<div id="map" class="contact__map-container"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__title">FOLLOW US</div>
+				<div class="footer__social">
+					<a href="/" class="footer__social-items">
+						<img src="icons/footer/pinterest.png" alt="pinterest" />
+					</a>
+					<a href="/" class="footer__social-items">
+						<img src="icons/footer/twitter.png" alt="twitter" />
+					</a>
+					<a href="/" class="footer__social-items">
+						<img src="icons/footer/facebook.png" alt="facebook" />
+					</a>
+					<a href="/" class="footer__social-items">
+						<img src="icons/footer/ball.png" alt="ball" />
+					</a>
+				</div>
+				<div class="footer__license">
+					Copyright Masum Parvej, All Rights Reserved
+				</div>
+			</div>
+		</footer>
 		<script src="js/script.js"></script>
 	</body>
 </html>

@@ -1,0 +1,54 @@
+.footer {
+	min-height: 310px;
+	padding: 93px 0;
+	background-color: #262b2e;
+	text-align: center;
+	&__title {
+		opacity: 0.8;
+		color: #ffffff;
+		font-family: "Raleway";
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 25px;
+		text-transform: uppercase;
+		letter-spacing: 0.16px;
+	}
+	&__social {
+		display: flex;
+		margin: 0 auto;
+		width: 205px;
+		justify-content: space-between;
+		margin-top: 19px;
+		&-items {
+			width: 46px;
+			height: 40px;
+			background-color: rgba($color: #8a8a8a, $alpha: 0.4);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				display: block;
+				position: relative;
+				max-height: 22px;
+				opacity: 0.5;
+			}
+			&:hover {
+				background-color: #71f6eb;
+				img {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__license {
+		opacity: 0.4;
+		color: #ffffff;
+		font-family: "Raleway";
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 25px;
+		letter-spacing: 0.16px;
+		margin-top: 43px;
+	}
+}
