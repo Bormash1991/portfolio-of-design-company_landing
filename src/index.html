@@ -2,7 +2,10 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no"
+		/>
 		<link rel="stylesheet" href="css/style.css" />
 
 		<title>Free</title>
@@ -24,7 +27,7 @@
 					Say Hello to <span>SHOPNO!</span> <br />
 					<span>Agency</span> CORPORATE SHOPNO Theme
 				</div>
-				<div class="btn btn_header">CONTACT US</div>
+				<a href="#contact" class="btn btn_header">CONTACT US</a>
 				<div class="header__juice">
 					<img src="img/header/juice.png" alt="glassOfJuice" />
 				</div>
@@ -62,28 +65,16 @@
 									<img src="img/slider/computer.png" alt="computer" />
 								</div>
 								<div class="slider__item">
-									<img
-										src="img/slider/CqRA610jLARcoygBQWPXJ7ZeKHFM9iRZ.jpg"
-										alt="computer"
-									/>
+									<img src="img/slider/photo.jpg" alt="computer" />
 								</div>
 								<div class="slider__item">
-									<img
-										src="img/slider/shutterstock_571885426-e1502207751845.jpg"
-										alt="computer"
-									/>
+									<img src="img/slider/photo.jpg" alt="computer" />
 								</div>
 								<div class="slider__item">
-									<img
-										src="img/slider/shutterstock_579867070.jpg"
-										alt="computer"
-									/>
+									<img src="img/slider/photo.jpg" alt="computer" />
 								</div>
 								<div class="slider__item">
-									<img
-										src="img/slider/b_NEG_pexelsphoto374074.jpeg"
-										alt="computer"
-									/>
+									<img src="img/slider/photo.jpg" alt="computer" />
 								</div>
 							</div>
 							<div class="slider__before"></div>
@@ -137,7 +128,7 @@
 						Lorem ipsum dolor sit amet event landing template
 					</div>
 				</div>
-				<div class="service__item-wrapper">
+				<div class="service__wrapper service__wrapper-one">
 					<div class="service__item">
 						<div class="service__overlay"></div>
 						<div class="service__item-main">
@@ -197,6 +188,8 @@
 							</button>
 						</div>
 					</div>
+				</div>
+				<div class="service__wrapper service__wrapper-two">
 					<div class="service__item">
 						<div class="service__overlay"></div>
 						<div class="service__item-main">
@@ -248,33 +241,8 @@
 							</button>
 						</div>
 					</div>
-					<div class="service__item">
-						<div class="service__overlay"></div>
-						<div class="service__item-main">
-							<div class="service__item-title">cool psd Design</div>
-							<div class="service__item-subtitle">
-								Our most popular service is our new virtual Receptionist you
-								middle most..
-							</div>
-							<button data-show-inf class="service__item-button">
-								Know More &#8594;
-							</button>
-						</div>
-						<div class="service__item-add">
-							<div class="service__item-title service__item-title_black">
-								cool psd Design
-							</div>
-							<div class="service__item-subtitle service__item-subtitle_black">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Repellat dolores ratione nobis quod iste eveniet quasi hic,
-								corporis perferendis fuga ut at inventore modi doloribus
-								delectus. Ratione non quae optio.
-							</div>
-							<button class="service__item-button service__item-button_black">
-								&times;
-							</button>
-						</div>
-					</div>
+				</div>
+				<div class="service__wrapper service__wrapper-three">
 					<div class="service__item">
 						<div class="service__overlay"></div>
 						<div class="service__item-main">
@@ -290,6 +258,33 @@
 						<div class="service__item-add">
 							<div class="service__item-title service__item-title_black">
 								Designing is The Cool FOR
+							</div>
+							<div class="service__item-subtitle service__item-subtitle_black">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Repellat dolores ratione nobis quod iste eveniet quasi hic,
+								corporis perferendis fuga ut at inventore modi doloribus
+								delectus. Ratione non quae optio.
+							</div>
+							<button class="service__item-button service__item-button_black">
+								&times;
+							</button>
+						</div>
+					</div>
+					<div class="service__item">
+						<div class="service__overlay"></div>
+						<div class="service__item-main">
+							<div class="service__item-title">cool psd Design</div>
+							<div class="service__item-subtitle">
+								Our most popular service is our new virtual Receptionist you
+								middle most..
+							</div>
+							<button data-show-inf class="service__item-button">
+								Know More &#8594;
+							</button>
+						</div>
+						<div class="service__item-add">
+							<div class="service__item-title service__item-title_black">
+								cool psd Design
 							</div>
 							<div class="service__item-subtitle service__item-subtitle_black">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -708,7 +703,7 @@
 			<div class="container container_p">
 				<div class="contact__wrapper">
 					<div class="contact__form-wrapper">
-						<form action="#" class="contact__form">
+						<form action="#" class="contact__form" data-send-form>
 							<label for="nameвава">Name*</label>
 							<input
 								class="contact__form-input"
@@ -716,6 +711,7 @@
 								name="name"
 								type="text"
 								required
+								data-clear-text
 							/>
 							<label for="subject">Subject*</label>
 							<input
@@ -724,6 +720,7 @@
 								name="subject"
 								type="text"
 								required
+								data-clear-text
 							/>
 							<label for="email">E-mail*</label>
 							<input
@@ -732,6 +729,7 @@
 								name="email"
 								type="email"
 								required
+								data-clear-text
 							/>
 							<label for="message">Message*</label>
 							<textarea
@@ -741,6 +739,7 @@
 								type="text"
 								required
 								maxlength="2000"
+								data-clear-text
 							></textarea>
 							<button class="contact__form-button">Send Message</button>
 						</form>

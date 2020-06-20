@@ -17,3 +17,33 @@
 		}
 	}
 }
+@media (max-width: 1199.98px) {
+	.work {
+		padding: 85px 0;
+		&__item {
+			&-wrapper {
+				margin-top: 85px;
+			}
+		}
+	}
+}
+@media (max-width: 991.98px) {
+	.work {
+		&__item {
+			&-wrapper {
+				grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+			}
+		}
+	}
+}
+@media (max-width: 575.98px) {
+	.work {
+		padding: 40px 0;
+		
+		&__item {
+			&-wrapper {
+				margin-top: 60px;
+			}
+		}
+	}
+}

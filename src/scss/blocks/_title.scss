@@ -21,3 +21,21 @@
 		margin-top: 17px;
 	}
 }
+@media (max-width: 767.98px) {
+	.title {
+		&__subheader {
+			font-size: 16px;
+		}
+	}
+}
+@media (max-width: 575.98px) {
+	.title {
+		&__header {
+			font-size: 25px;
+		}
+		&__subheader {
+			font-size: 15px;
+			margin-top: 13px;
+		}
+	}
+}

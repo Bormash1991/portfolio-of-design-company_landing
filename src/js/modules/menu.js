@@ -9,7 +9,7 @@ const menu = (hamburgerSelector, closeBtnSelector, itemWrapperSelector) => {
 		document.body.style.marginRight = `${checkWidth()}px`;
 	});
 	const closeMenu = () => {
-		itemWrapper.style.top = "-100%";
+		itemWrapper.style.top = "-100vh";
 		document.body.style.overflow = "";
 		document.body.style.marginRight = `0px`;
 	};

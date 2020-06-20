@@ -4,13 +4,14 @@ import personInformation from "./modules/personInformation";
 import map from "./modules/map";
 import menu from "./modules/menu";
 import scroll from "./modules/scroll";
+import sendForm from "./modules/sendForm";
 window.addEventListener("DOMContentLoaded", () => {
 	slider(
 		".slider_about .slider__item",
 		".slider_about .slider__inner",
 		".slider_about .slider__dots",
 		".slider_about .slider__wrapper",
-		false
+		true
 	);
 	slider(
 		".slider_team .slider__item",
@@ -35,4 +36,5 @@ window.addEventListener("DOMContentLoaded", () => {
 	map();
 	menu(".header__hamburger", ".header__menu-close", ".header__menu");
 	scroll();
+	sendForm();
 });

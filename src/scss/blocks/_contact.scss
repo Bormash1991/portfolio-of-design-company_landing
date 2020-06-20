@@ -48,20 +48,20 @@
 		}
 		&-text {
 			resize: none;
-			padding: 11px 15px 0 5px;
+			padding: 12.5px 15px 0 5px;
 			height: 100px;
 		}
 		&-wrapper {
 			width: 614px;
-			height: 460px;
+			min-height: 460px;
 			box-shadow: 0 0 30px rgba(21, 21, 21, 0.12);
 			background-color: rgba($color: #021623, $alpha: 0.71);
 
-			padding: 22px 33px 0 33px;
+			padding: 22px 33px 10px 33px;
 		}
 		&-button {
 			width: 244px;
-			height: 53px;
+			min-height: 53px;
 			background-color: #6eeee4;
 			border: none;
 			color: #0000008e;
@@ -93,10 +93,60 @@
 			padding: 36px 22px 0 22px;
 		}
 		&-container {
-			width: 455px;
 			height: 224px;
 			margin: 0 auto;
 			margin-top: 23px;
+		}
+	}
+}
+@media (max-width: 1199.98px) {
+	.contact {
+		height: 630px;
+		padding: 85px 0;
+		&__form {
+			&-wrapper {
+				width: 49%;
+			}
+		}
+		&__map {
+			&-wrapper {
+				width: 49%;
+			}
+		}
+	}
+}
+@media (max-width: 767.98px) {
+	.contact {
+		height: 1111px;
+		background: linear-gradient(
+				180deg,
+				rgba(255, 255, 255, 1) 11%,
+				rgba(246, 246, 248, 0.596) 83%
+			),
+			url("../img/contact/bc1.png") bottom (right / cover) no-repeat;
+		&__wrapper {
+			flex-direction: column;
+		}
+		&__form {
+			&-wrapper {
+				width: 100%;
+			}
+		}
+		&__map {
+			&-wrapper {
+				margin-top: 20px;
+				width: 100%;
+			}
+		}
+	}
+}
+@media (max-width: 575.98px) {
+	.contact {
+		padding: 65px 0;
+		&__form {
+			&-button {
+				width: 100%;
+			}
 		}
 	}
 }

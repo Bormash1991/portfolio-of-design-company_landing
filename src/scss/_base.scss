@@ -5,3 +5,12 @@
 .show {
 	left: 0 !important;
 }
+// body {
+// 	position: relative;
+// }
+@media (max-width: 575.98px) {
+	.container_p {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
