@@ -16404,7 +16404,10 @@ const slider = (contentSelector, innerSelector, dWrapperSelector = "", wrapperSe
   }
 
   if (contentSelector == ".slider_inform .slider__item") {
+    const wrapper = document.querySelector(".slider_inform"),
+          heightWrapper = window.getComputedStyle(wrapper).height;
     dotsWrapper = document.querySelector(dWrapperSelector);
+    dotsWrapper.style.bottom = `-${+heightWrapper.slice(0, heightWrapper.length - 2) + 55}px`;
     dots = dotsWrapper.querySelectorAll(".slider__dot");
     dotsWrapper.addEventListener("click", e => {
       const target = e.target;

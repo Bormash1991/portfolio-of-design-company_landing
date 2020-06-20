@@ -7385,9 +7385,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media (max-width: 575.98px) {
   .title__header {
-    font-size: 25px; }
+    font-size: 27px; }
   .title__subheader {
-    font-size: 15px;
+    font-size: 13px;
     margin-top: 13px; } }
 
 .slider {
@@ -7552,7 +7552,8 @@ a.text-dark:hover, a.text-dark:focus {
     width: 261px;
     height: 324px; }
     .slider__wrapper_inf {
-      width: 95%; }
+      width: 100%;
+      height: auto; }
   .slider_team {
     margin: 0; }
     .slider_team .slider__dots {
